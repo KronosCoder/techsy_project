@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../../components/Header/header'
+import Header from '../../components/Header/Header'
 import '../../themes/css/global.css'
 
-export default function home() {
+export default function HomePage() {
   return (
     <>
         <Header />
     </>
   )
-}
+} 

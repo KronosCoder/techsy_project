@@ -1,0 +1,124 @@
+.header-top {
+  position: relative;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+.menu-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.tel-site {
+  color: var(--secondary-color);
+  font-weight:  bolder;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.store-lang , .store-currency {
+  text-align: center;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+
+  &:hover::after {
+    border-bottom: solid 1px var(--secondary-color);
+    border-right: solid 1px var(--secondary-color);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+    border-right: solid 1px rgba(0, 0, 0, 0.4);
+    width: 5px;
+    aspect-ratio: 1;
+    margin-left: 5px;
+    transform: rotate(45deg);
+  }
+}
+
+#topDropdown-1 , #topDropdown-2 {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  background: #fff;  
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index: -99;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-5%);
+  transition: opacity 0.15s ease-in-out , transform 0.25s ease-in-out;
+}
+
+.dropdown.dropdown-expanded {
+  opacity: 1;
+  z-index: 99;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  font-size: 12.5px;
+  width: 100%;
+  padding: 5px 40px;
+  text-align: center;
+  background: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--secondary-color);
+  } 
+}
+
+/* Reponsive */
+
+@media (min-width: 576px) {
+    .header-top {
+      display: none;
+    }
+  }
+  
+@media (min-width: 768px) {
+    /* css */
+}
+
+@media (min-width: 992px) {
+      /* css */
+}
+  
+  @media (min-width: 1200px) {
+    .header-top {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    /* css */
+  }
+  
+  @media (min-width: 1600px) {
+    /* css */
+  }
+  
+  /*  */
